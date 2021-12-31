@@ -5,4 +5,4 @@
 
 코드에 대한 자세한 설명은 블로그에 적어두었습니다.
 
-> https://www.blog.naver.com/jjunsss
+> https://blog.naver.com/jjunsss
