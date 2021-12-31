@@ -19,14 +19,6 @@ screen = pygame.display.set_mode((screenWidth,screenHeight))  #가로, 세로
 black = pygame.Color('#061F3E')
 background = screen.fill(black)
 
-#이동할 좌표
-toX = 0
-toY = 0
-
-#난수 생성
-randomY = 30
-poSpeed = 20
-
 #트리 만들기 & 트리크기 측정
 tree_image = pygame.image.load("many_star.png")
 tree_image = pygame.transform.scale(tree_image, (10, 10))   
@@ -74,7 +66,6 @@ last = big_star_image.get_rect(left=200, top= -220 - big_star_image.get_height()
 # trees3, stars3 = make_tree(3, x_3, y_top - 2 * tree_height)
 # trees4, stars4 = make_tree(2, x_4, y_top - 3 * tree_height)
 # trees5, stars5 = make_tree(1, x_5, y_top - 4 * tree_height)
-
 # tree_star = {0 :(trees, stars), 1:(trees2, stars2), 2:(trees3, stars3), 3: (trees4, stars4), 4: (trees5, stars5)}
 
 ##! snow
@@ -117,8 +108,8 @@ def end_define(check_num, end_line, tree, star = None):
     
 #Event
 running = True
-
 play = False
+
 while running:  #실행창
     
     clock.tick(60)
@@ -189,10 +180,4 @@ while running:  #실행창
     # 출력할 글자, , 색상
     scoree = game_font.render(str(score), True, (random.randint(0, 255),random.randint(0, 255),random.randint(0, 255)))  #(글자, smooth Edges , 색상 )
     
-    
-
-    #screen.blit(background, (0,0)) 
-    
-    #screen.blit(tree, (treeXpos , treeYpos))
-   
     pygame.display.update() #화면 새로고침
